@@ -2,10 +2,12 @@
 #include<stdlib.h>
 #include<assert.h>
 
-int strlen(char link){
-   assert(link);
+int strlen(const char* link){
+   
    int numerator = 0;
-   while ( link[numerator] != "\0") ++numerator;  
+   while ( *(link++) != "\0") ++numerator;
+   
+   return numerator;   
 }
 
 
