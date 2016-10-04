@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <locale.h>
+#include <assert.h>
 
 //функция для сравнения двух чисел
 bool sravnenie_chisel(float a, float b){
@@ -13,8 +14,8 @@ bool sravnenie_chisel(float a, float b){
 
 //реализуем функцию для подсчета корней
 bool korni (float a[3], float x, bool* logic){
-	
-	
+	assert(a);
+	assert(x);
 	if ( sravnenie_chisel(0, a[0]) && sravnenie_chisel(0, a[1]) ){
 		printf("уравнение выродилось из квадратного, x=");
 		if ( !sravnenie_chisel(a[2],0) ){
