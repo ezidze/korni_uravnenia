@@ -1,11 +1,33 @@
-#include <stdio.>
+#include <stdio.h>
+
 #include<stdlib.h>
+
 #include<assert.h>
 
-int strlen(char link){
+
+
+int strlen(const char* link){
+
    assert(link);
+
    int numerator = 0;
-   while ( link[numerator] != "\0") ++numerator;  
+
+   while ( *(link++) ) ++numerator; 
+
+   return numerator;
+
 }
 
+int main(){
 
+	char line[] = "blablabla Ivanov Iliy";
+	printf("enter a line of text\n");
+	scanf(line);
+	printf("the string has a length ");
+	printf("%d\n", strlen(line));
+
+	system("pause");
+
+	return 0;
+
+}
