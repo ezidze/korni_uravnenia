@@ -4,6 +4,7 @@
 
 #include<assert.h>
 
+<<<<<<< HEAD
 
 
 int strlen(const char* link){
@@ -16,6 +17,14 @@ int strlen(const char* link){
 
    return numerator;
 
+=======
+int strlen(const char* link){
+   
+   int numerator = 0;
+   while ( *(link++) != "\0") ++numerator;
+   
+   return numerator;   
+>>>>>>> c22a0bb55c56a2cb58a6af8eabbe96c91867f786
 }
 
 int main(){
